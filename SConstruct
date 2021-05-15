@@ -15,7 +15,7 @@ opts.Add(EnumVariable('p', "Compilation target, alias for 'platform'",
          '', ['', 'windows', 'x11', 'linux', 'osx']))
 opts.Add(BoolVariable('use_llvm', "Use the LLVM / Clang compiler", 'no'))
 opts.Add(PathVariable('target_path',
-         'The path where the lib is installed.', 'demo/bin/'))
+         'The path where the lib is installed.', 'godot-cpp/bin'))
 opts.Add(PathVariable('target_name', 'The library name.',
          'libgdexample', PathVariable.PathAccept))
 
