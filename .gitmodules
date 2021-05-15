@@ -1,6 +1,7 @@
 [submodule "godot-cpp"]
-	path = godot-cpp
-	url = https://github.com/godotengine/godot-cpp
+path = godot-cpp
+url = https://github.com/godotengine/godot-cpp
+
 [submodule "assets"]
-	path = assets
-	url = https://github.com/Cerulean-Shot-Entertainment/CSE-Tactics-Assets
+path = assets
+url = https://github.com/Cerulean-Shot-Entertainment/CSE-Tactics-Assets
