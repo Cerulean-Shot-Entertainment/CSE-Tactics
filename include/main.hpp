@@ -1,5 +1,6 @@
 #include <Godot.hpp>
 #include <Sprite.hpp>
+#include <iostream>
 
 namespace godot
 {

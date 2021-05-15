@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Cse- Tactics"
+config/name="CSE-Tactics"
 run/main_scene="res://maps/map.tscn"
 config/icon="res://icon.png"
 
