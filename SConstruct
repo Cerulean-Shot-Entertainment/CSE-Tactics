@@ -14,13 +14,18 @@ if not(os.path.isdir("bin")):
 # Define our options
 opts.Add(EnumVariable("target", "Compilation target",
          "debug", ["d", "debug", "r", "release"]))
+
 opts.Add(EnumVariable("platform", "Compilation platform",
          "", ["", "windows", "x11", "linux", "osx"]))
+
 opts.Add(EnumVariable("p", "Compilation target, alias for platform",
          "", ["", "windows", "x11", "linux", "osx"]))
+
 opts.Add(BoolVariable("use_llvm", "Use the LLVM / Clang compiler", "no"))
+
 opts.Add(PathVariable("target_path",
          "The path where the lib is installed.", "bin/"))
+
 opts.Add(PathVariable("target_name", "The library name.",
          "libcse-tactics", PathVariable.PathAccept))
 
@@ -56,7 +61,12 @@ if env["platform"] == "":
 # - LINKFLAGS are for linking flags
 
 # Check our platform specifics
+
+libsuffix = ""
+objectsuffix = ""
 if env["platform"] == "osx":
+    objectsuffix = ".o"
+    libsuffix = ".dynlib"
     env["target_path"] += "osx/"
     cpp_library += ".osx"
     env.Append(CCFLAGS=["-arch", "x86_64"])
@@ -68,6 +78,8 @@ if env["platform"] == "osx":
         env.Append(CCFLAGS=["-g", "-O3"])
 
 elif env["platform"] in ("x11", "linux"):
+    objectsuffix = ".o"
+    libsuffix = ".so"
     env["target_path"] += "x11/"
     cpp_library += ".linux"
     env.Append(CCFLAGS=["-fPIC"])
@@ -78,6 +90,8 @@ elif env["platform"] in ("x11", "linux"):
         env.Append(CCFLAGS=["-g", "-O3"])
 
 elif env["platform"] == "windows":
+    objectsuffix = ".obj"
+    libsuffix = ".dll"
     env["target_path"] += "win64/"
     cpp_library += ".windows"
     # This makes sure to keep the session environment variables on windows,
@@ -125,9 +139,10 @@ env.Append(LIBS=[cpp_library])
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
+env.Append(OBJSUFFIX=objectsuffix)
 
 library = env.SharedLibrary(
-    target=env["target_path"] + env["target_name"], source=sources)
+    target=env["target_path"] + env["target_name"], source=sources, SHLIBSUFFIX=libsuffix)
 
 Default(library)
 
