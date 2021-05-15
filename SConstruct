@@ -3,8 +3,13 @@ import os
 
 opts = Variables([], ARGUMENTS)
 
+SConscript(["godot-cpp/SConstruct"])
+
 # Gets the standard flags CC, CCX, etc.
 env = DefaultEnvironment()
+
+if not(os.path.isdir("godot-cpp/bin")):
+    os.mkdir("godot-cpp/bin")
 
 # Define our options
 opts.Add(EnumVariable("target", "Compilation target",
