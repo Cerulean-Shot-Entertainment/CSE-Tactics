@@ -10,7 +10,6 @@ export_presets.cfg
 .mono/
 data_*/
 
-*.import
 *.os
 *.dblite
 .directory
