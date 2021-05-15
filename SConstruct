@@ -113,7 +113,7 @@ cpp_library += "." + str(bits)
 
 # make sure our binding library is properly includes
 env.Append(CPPPATH=[".", godot_headers_path, cpp_bindings_path + "include/",
-           cpp_bindings_path + "include/core/", cpp_bindings_path + "include/gen/"])
+           cpp_bindings_path + "include/core/", cpp_bindings_path + "include/gen/", "include/"])
 env.Append(LIBPATH=[cpp_bindings_path + "bin/"])
 env.Append(LIBS=[cpp_library])
 
