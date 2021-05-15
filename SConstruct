@@ -8,8 +8,8 @@ SConscript(["godot-cpp/SConstruct"])
 # Gets the standard flags CC, CCX, etc.
 env = DefaultEnvironment()
 
-if not(os.path.isdir("godot-cpp/bin")):
-    os.mkdir("godot-cpp/bin")
+if not(os.path.isdir("bin")):
+    os.mkdir("bin")
 
 # Define our options
 opts.Add(EnumVariable("target", "Compilation target",
@@ -20,7 +20,7 @@ opts.Add(EnumVariable("p", "Compilation target, alias for platform",
          "", ["", "windows", "x11", "linux", "osx"]))
 opts.Add(BoolVariable("use_llvm", "Use the LLVM / Clang compiler", "no"))
 opts.Add(PathVariable("target_path",
-         "The path where the lib is installed.", "godot-cpp/bin"))
+         "The path where the lib is installed.", "bin/"))
 opts.Add(PathVariable("target_name", "The library name.",
          "libcse-tactics", PathVariable.PathAccept))
 
