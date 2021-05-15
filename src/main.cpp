@@ -5,11 +5,11 @@ using namespace godot;
 void CSE_Tactics::_register_methods()
 {
     register_method("_process", &CSE_Tactics::_process);
-    std::cout << "Main Module Loaded!";
 }
 
 CSE_Tactics::CSE_Tactics()
 {
+    std::cout << "Main Module Loaded!";
 }
 
 CSE_Tactics::~CSE_Tactics()
