@@ -4,6 +4,6 @@
 
 [resource]
 
-resource_name = "cse-tactics"
-class_name = "CSE_Tactics"
+resource_name = "Character Map"
+class_name = "Character Map"
 library = ExtResource( 1 )
