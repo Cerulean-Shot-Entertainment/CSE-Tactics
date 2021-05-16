@@ -1,0 +1,9 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[ext_resource path="res://cse-tactics.gdnlib" type="GDNativeLibrary" id=1]
+
+[resource]
+
+resource_name = "cse-tactics"
+class_name = "CSE_Tactics"
+library = ExtResource( 1 )

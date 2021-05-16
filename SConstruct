@@ -27,7 +27,7 @@ opts.Add(PathVariable("target_path",
          "The path where the lib is installed.", "bin/"))
 
 opts.Add(PathVariable("target_name", "The library name.",
-         "libcse-tactics", PathVariable.PathAccept))
+         "cse-tactics", PathVariable.PathAccept))
 
 # Local dependency paths, adapt them to your setup
 godot_headers_path = "godot-cpp/godot-headers/"
