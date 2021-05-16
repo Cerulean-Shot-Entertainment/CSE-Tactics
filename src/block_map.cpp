@@ -18,10 +18,6 @@ Block_Map::~Block_Map()
 
 void Block_Map::_init()
 {
-}
-
-void Block_Map::_process(float delta)
-{
     for (int x = 0; x < 5; x++)
     {
         for (int y = 0; y < 5; y++)
@@ -29,4 +25,8 @@ void Block_Map::_process(float delta)
             Block_Map::set_cell(x, y, 2);
         }
     }
+}
+
+void Block_Map::_process(float delta)
+{
 }
