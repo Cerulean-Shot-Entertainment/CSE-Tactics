@@ -1,6 +1,5 @@
 #include <Godot.hpp>
 #include <Camera2D.hpp>
-#include <cstdlib>
 
 namespace godot
 {

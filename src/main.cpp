@@ -1,5 +1,6 @@
 #include "character_map.hpp"
 #include "main_camera.hpp"
+#include "block_map.hpp"
 
 using namespace godot;
 
@@ -21,5 +22,6 @@ extern "C"
 
         godot::register_class<godot::Character_Map>();
         godot::register_class<godot::Main_Camera>();
+        godot::register_class<godot::Block_Map>();
     }
 }
