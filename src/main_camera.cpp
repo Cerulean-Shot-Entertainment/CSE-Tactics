@@ -22,4 +22,5 @@ void Main_Camera::_init()
 
 void Main_Camera::_process(float delta)
 {
+    Main_Camera::set_position({100, static_cast<float>(0xff & rand())});
 }

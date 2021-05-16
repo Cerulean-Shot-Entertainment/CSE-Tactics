@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/tiles/blocks.png" type="Texture" id=1]
+[ext_resource path="res://scripts/character_map.gdns" type="Script" id=2]
 [ext_resource path="res://assets/sprites/slime-128x128.png" type="Texture" id=3]
+[ext_resource path="res://scripts/main_camera.gdns" type="Script" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "blocks.png 0"
@@ -178,8 +180,10 @@ mode = 1
 tile_set = SubResource( 2 )
 cell_size = Vector2( 127, 64 )
 format = 1
+script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( -500, 0 )
 anchor_mode = 0
 current = true
+script = ExtResource( 4 )
