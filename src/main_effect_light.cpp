@@ -23,5 +23,4 @@ void Main_Effect_Light::_init()
 
 void Main_Effect_Light::_process(float delta)
 {
-    set_position(Main_Camera::get_position());
 }
