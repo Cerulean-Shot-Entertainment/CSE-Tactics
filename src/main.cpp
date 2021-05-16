@@ -1,4 +1,5 @@
 #include "character_map.hpp"
+#include "main_camera.hpp"
 
 using namespace godot;
 
@@ -19,5 +20,6 @@ extern "C"
         godot::Godot::nativescript_init(handle);
 
         godot::register_class<godot::Character_Map>();
+        godot::register_class<godot::Main_Camera>();
     }
 }

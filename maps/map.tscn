@@ -178,7 +178,6 @@ mode = 1
 tile_set = SubResource( 2 )
 cell_size = Vector2( 127, 64 )
 format = 1
-tile_data = PoolIntArray( 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( -500, 0 )
