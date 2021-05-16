@@ -1,5 +1,6 @@
 #include <Godot.hpp>
 #include <Light2D.hpp>
+#include <Viewport.hpp>
 
 namespace godot
 {

@@ -23,4 +23,13 @@ void Main_Effect_Light::_init()
 
 void Main_Effect_Light::_process(float delta)
 {
+    auto *node = get_node("/root/Node2D/Camera2D");
+
+    if (node == nullptr)
+    {
+        Godot::print("Can't Fetch Camera!");
+    }
+
+    auto camera = cast_to<Camera2D>(node);
+    set_position(camera->get_position());
 }

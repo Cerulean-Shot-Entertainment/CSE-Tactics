@@ -22,7 +22,7 @@ void Block_Map::_init()
     {
         for (int y = 0; y < 5; y++)
         {
-            Block_Map::set_cell(x, y, 2);
+            Block_Map::set_cell(x - 2, y - 2, 2);
         }
     }
 }

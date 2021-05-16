@@ -22,4 +22,7 @@ void Main_Camera::_init()
 
 void Main_Camera::_process(float delta)
 {
+    auto pos = get_position();
+    pos.x += delta * 10;
+    set_position(pos);
 }
